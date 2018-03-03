@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import './Main.css';
-import { Route, Link, Switch } from "react-router-dom"; 
+import { Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import Galleries from "../Galleries/Galleries";
 
@@ -14,6 +14,7 @@ class Main extends Component{
         }
     }
 
+ 
     handleChange = (e) => {
         this.setState({
             zipcode: e.target.value
@@ -40,7 +41,7 @@ class Main extends Component{
     render(){
 
         return(
-            <div> 
+            <div>
                 Search By Zip Code:
                 <input type="text" id="searchbar" onChange={this.handleChange}/>
                 <button id="submit" onClick={this.handleSubmit}>Submit</button>
