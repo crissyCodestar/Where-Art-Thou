@@ -13,12 +13,14 @@ class Galleries extends Component{
     render(){
         const {resultArr} = this.props;
         return(
-            <div>
-                <ul>
+            <div id="galleryList">
+                <div>
                 {resultArr.map ((el, i) => (
-                    <li key={i}> {el.name} {el.the_geom.coordinates} {el.url} </li>
+                    <p id="renderedGallery" key={i}> {el.name} {el.the_geom.coordinates} 
+                        <a target="_blank" rel="nofollow" href={el.url}>{el.url}</a> 
+                    </p>
                 ))}
-                </ul>
+                </div>
             </div>
         )
     }
