@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-//import './Main.css';
+//import './Galleries.css';
 import { Route, Link, Switch } from "react-router-dom"; 
-import axios from "axios";
+
 
 
 
@@ -16,7 +16,9 @@ class Galleries extends Component{
             <div>
                 <ul>
                 {resultArr.map ((el, i) => (
-                    <li key={i}> {el.name} {el.the_geom.coordinates} {el.url} </li>
+                    <li key={i}>
+                     {el.name} - {el.address1} 
+                     </li>
                 ))}
                 </ul>
             </div>
