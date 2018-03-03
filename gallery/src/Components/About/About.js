@@ -29,7 +29,7 @@ class About extends Component{
                         <div class="bio">
                             <img width="200" alt="Bio image 2" src={glBio}/>
                             Guzal Latypova
-                            software engineer, artist 
+                            software engineer, artist, curator 
                         </div>    
                         <div class="bio">
                             <img width="200" alt="Bio image 3" src={cpBio}/>
