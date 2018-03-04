@@ -20,7 +20,10 @@
 
 #galleryList {
     float: left;
-    margin-left:35%;
+    margin-left:5%;
+    margin-right: 5%;
+    width: 100%;
+    padding: 30px;
 }
 
 #renderedGallery {
@@ -29,4 +32,7 @@
     border: 2px solid black;
     height: 250px;
     float: left;
+    width: 300px;
+    margin-right: 5%;
+    display: inline-block;
 }
