@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-//import './Main.css';
-import { Route, Link, Switch } from "react-router-dom"; 
-import axios from "axios";
-
 
 
 class Galleries extends Component{
@@ -13,12 +9,13 @@ class Galleries extends Component{
     render(){
         const {resultArr} = this.props;
         return(
-            <div>
-                <ul>
+            <div >
+                <div id="galleryList">
                 {resultArr.map ((el, i) => (
-                    <li key={i}> {el.name} {el.the_geom.coordinates} {el.url} </li>
+                    <p id="renderedGallery" key={i}> {el.name} - {el.address1} 
+                    </p>
                 ))}
-                </ul>
+                </div>
             </div>
         )
     }

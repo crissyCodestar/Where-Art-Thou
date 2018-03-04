@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-//import './Main.css';
+import './Main.css';
 import { Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import Galleries from "../Galleries/Galleries";
+
 import { GoogleApiWrapper } from 'google-maps-react'
 import Map from '../Map/Map'
 import MapInfo from "../Map/MapInfo";
 
 import './Main.css';
-class Main extends Component{
-    constructor(){
+
+class Main extends Component {
+    constructor() {
         super();
-        this.state={
+        this.state = {
             zipcode: "",
             resultArr: [],
              selectedArt: null
@@ -51,6 +53,25 @@ class Main extends Component{
 const { selectedArt } = this.state;
         return(
             <div>
+                <h1>Where ART Thou</h1>
+                <div>
+                    <input 
+                        type="text" 
+                        id="searchBar" 
+                        placeholder="Search by Zip Code" 
+                        onChange={this.handleChange}
+                    />
+                </div>
+                <button 
+                    id="submit" 
+                    onClick={this.handleSubmit}>Where ART Thou?
+                </button>
+                <label></label>
+                <div>
+                    <GoogleMap />
+                    <Galleries resultArr={this.state.resultArr} />
+                </div>
+            
 
                 Search By Zip Code:
                 <input type="text" id="searchbar" onChange={this.handleChange}/>
@@ -68,6 +89,7 @@ const { selectedArt } = this.state;
                 <div>
                   {selectedArt ? MapInfo(selectedArt) : <strong> Gallery </strong>}
                 </div>
+
             </div>
         )
     }
