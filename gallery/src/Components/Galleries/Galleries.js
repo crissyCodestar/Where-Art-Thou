@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link, Route, Switch} from 'react-router-dom';
 
 
 class Galleries extends Component{
@@ -12,9 +13,10 @@ class Galleries extends Component{
             <div >
                 <div id="galleryList">
                 {resultArr.map ((el, i) => (
-                    <p id="renderedGallery" key={i}> {el.name} - {el.address1} 
-                    </p>
+                    <div> <p id="renderedGallery" key={i}> {el.name} - {el.address1} 
+                    </p></div>
                 ))}
+
                 </div>
             </div>
         )

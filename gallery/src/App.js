@@ -14,18 +14,16 @@ class App extends Component {
     return (
       <div>
         <div>
-          <div id="headerImgDiv"><img id="headerImg" src={headerImg} alt="header image"/> </div>
+          <div id="headerImgDiv">
           <div id="navbar">
             <Link to="/">Home</Link> {"  "}
             <Link to="/about">About</Link> {"  "}
-          </div>
-          
-          <h1>Where ART Thou</h1>
-
+          </div>        
+          <h3 className="headerTitle">Where ART Thou</h3>
+           </div>
 
           <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
-
         </div>
       </div>
     );
