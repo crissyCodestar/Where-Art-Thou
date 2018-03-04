@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-//import './Main.css';
-import { Route, Link, Switch } from "react-router-dom"; 
-import axios from "axios";
-
 
 
 class Galleries extends Component{
@@ -16,8 +12,7 @@ class Galleries extends Component{
             <div >
                 <div id="galleryList">
                 {resultArr.map ((el, i) => (
-                    <p id="renderedGallery" key={i}> {el.name} {el.the_geom.coordinates} 
-                        <a target="_blank" rel="nofollow" href={el.url}>{el.url}</a> 
+                    <p id="renderedGallery" key={i}> {el.name} - {el.address1} 
                     </p>
                 ))}
                 </div>

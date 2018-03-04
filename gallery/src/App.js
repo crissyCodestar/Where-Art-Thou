@@ -2,22 +2,26 @@ import React, { Component } from 'react';
 import './App.css';
 import ReactDOM from 'react-dom';
 import { Route, Link, Switch } from "react-router-dom";
-import Main from "./Components/Main/Main"
+import Main from "./Components/Main/Main";
+import About from "./Components/About/About";
 
 
 class App extends Component {
-  homepage = () => {
-    return <h1 id="maintitle"> Art De(Code) </h1>
-  }
+
   render() {
     return (
       <div>
         <div>
-          <Link to="/">Home</Link> {"  "}
-          <Link to="/about">About</Link> {"  "}
-        </div>
-        <Route path="/" component={Main} />
-        {/*<Route path="/about" component={About} />*/}
+          <h1>Art deCode</h1>
+          <div id="navbar">
+            <Link to="/">Home</Link> {"  "}
+            <Link to="/about">About</Link> {"  "}
+          </div>
+
+          <Route exact path="/" component={Main} />
+          <Route path="/about" component={About} />
+
+   </div>
       </div>
     );
   }
