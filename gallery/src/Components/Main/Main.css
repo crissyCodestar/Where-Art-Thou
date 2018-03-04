@@ -1,0 +1,32 @@
+#searchBar {
+    width: 85%;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#submit {
+    height: 25px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+#galleryList {
+    height: 400px;
+    width: 400px;
+    float: left;
+}
+
+#galleryList {
+    float: left;
+    margin-left:35%;
+}
+
+#renderedGallery {
+    text-align: center;
+    word-wrap: break-word;
+    border: 2px solid black;
+    height: 250px;
+    float: left;
+}

@@ -9,14 +9,13 @@ class Galleries extends Component{
     render(){
         const {resultArr} = this.props;
         return(
-            <div>
-                <ul>
+            <div id="galleryList">
+                <div>
                 {resultArr.map ((el, i) => (
-                    <li key={i}>
-                     {el.name} - {el.address1} 
-                     </li>
+                    <p id="renderedGallery" key={i}> {el.name} - {el.address1} 
+                    </p>
                 ))}
-                </ul>
+                </div>
             </div>
         )
     }

@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-//import './Main.css';
+import './Main.css';
 import { Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import Galleries from "../Galleries/Galleries";
+import GoogleMap from "../Map/Map";
 
 
-class Main extends Component{
-    constructor(){
+class Main extends Component {
+    constructor() {
         super();
-        this.state={
+        this.state = {
             zipcode: "",
             resultArr: []
         }
     }
 
- 
+
     handleChange = (e) => {
         this.setState({
             zipcode: e.target.value
@@ -22,30 +23,35 @@ class Main extends Component{
     }
 
     handleSubmit = () => {
-        axios
-        .get(
-          `https://data.cityofnewyork.us/resource/43hw-uvdj.json?zip=${this.state.zipcode}`
-        )
-        .then(res => {
-          this.setState({
-            resultArr: res.data
-          });
-        })
-        .catch(err => {
-          console.log("error fetching galleries");
+        axios.get(
+            `https://data.cityofnewyork.us/resource/43hw-uvdj.json?zip=${this.state.zipcode}`
+        ).then(res => {
+            this.setState({
+                resultArr: res.data
+            });
+        }).catch(err => {
+            console.log("error fetching galleries");
         });
     }
 
-
-
-    render(){
-
-        return(
+    render() {
+        return (
             <div>
-                Search By Zip Code:
-                <input type="text" id="searchbar" onChange={this.handleChange}/>
-                <button id="submit" onClick={this.handleSubmit}>Submit</button>
-                <Galleries resultArr={this.state.resultArr}/>
+                <h1>Where ART Thou</h1>
+                <div>
+                    <input 
+                        type="text" 
+                        id="searchBar" 
+                        placeholder="Search by Zip Code" 
+                        onChange={this.handleChange}
+                    />
+                </div>
+                <button 
+                    id="submit" 
+                    onClick={this.handleSubmit}
+                    >Where ART Thou?</button>
+                <GoogleMap />
+                <Galleries resultArr={this.state.resultArr} />
             </div>
         )
     }
