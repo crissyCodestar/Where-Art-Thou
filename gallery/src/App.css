@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: white;
 }
 
 /* #searchBar {
@@ -39,4 +40,16 @@ h1 {
   float: left;
   margin-left: 350px;
   margin-top: 50px;
+}
+
+#footer {
+  height: 50px;
+  background-color: #191919;
+}
+
+#thanks {
+  text-align: center;
+  margin: 0;
+  padding: 14px; 
+  font-size: 18px;
 }

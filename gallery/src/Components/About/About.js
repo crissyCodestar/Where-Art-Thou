@@ -5,46 +5,55 @@ import cgBio from '../../pics/CrystalBio.jpg';
 import rzBio from '../../pics/RomieBio.jpg';
 import './About.css';
 
-class About extends Component{
+class About extends Component {
 
-    render(){
-        return(
+    render() {
+        return (
             <div id="aboutDiv">
                 <h2>About Us </h2>
-                <h3> Mission </h3>
+                <div id="descriptionDiv">
+                    <h3> Mission </h3>
                     <p id="mission">
-                    New York City is home to over a thousand art galleries, presenting diverse and beautiful art in every imaginable discipline. From the Bronx to Far Rockaway, there are galleries at almost every step, and some hidden treasures that even long-time residents know litte about. 
+                        New York City is home to over a thousand art galleries, presenting diverse and beautiful art in every imaginable discipline. From the Bronx to Far Rockaway, there are galleries at almost every step, and some hidden treasures that even long-time residents know litte about.
 
-                    We created "Art deCode" with the vision that discovering and seeing new and amazing art is only a click away. With an easy to use interface our app allows to search for art galleries by simply typing in your zip code.
+                        We created "Art deCode" with the vision that discovering and seeing new and amazing art is only a click away. With an easy to use interface our app allows to search for art galleries by simply typing in your zip code.
                     </p>
-
+                </div>
                 <h3> Team </h3>
-                    <p>We are a team of creatives who are passionate about art, connections, and code.                       
-                    </p>
+                <p id="desciption">We are a team of creatives who are passionate about art, connections, and code.</p>
 
-                    <div id="bios">
-                        <div class="bio">
-                            <img width="200" alt="Bio image 1" src={cgBio}/>
-                            Crystal Grant
-                            software engineer, graphic designer
-                        </div> 
-                        <div class="bio">
-                            <img width="200" alt="Bio image 2" src={glBio}/>
-                            Guzal Latypova
-                            software engineer, artist, curator 
-                        </div>    
-                        <div class="bio">
-                            <img width="200" alt="Bio image 3" src={cpBio}/>
-                            Chaltin Pagan
-                            software engineer, project-manager, artist
-                        </div>   
-                        <div class="bio">
-                            <img width="200" alt="Bio image 4" src={rzBio}/>
-                            Romie Zelaya
-                            software engineer, amateur photographer
-                        </div>   
-                    </div>    
+                <div id="bios">
+                    <div className="bio">
+                        <img width="200px" height="200px" alt="Bio image 1" src={cgBio} />
+                        <div id="info">
+                            <p id="name"><strong>Crystal Grant</strong></p>
+                            <p>Software Engineer, Graphic Designer</p>
+                        </div>
+                    </div>
+                    <div className="bio">
+                        <img width="200px" height="200px" alt="Bio image 2" src={glBio} />
+                        <div id="info">
+                            <p id="name"><strong>Guzal Latypova</strong></p>
+                            <p>Software Engineer, Artist, Curator</p>
+                        </div>
+                    </div>
+                    <div className="bio">
+                        <img width="200px" height="200px" alt="Bio image 3" src={cpBio} />
+                        <div id="info">
+                            <p id="name"><strong>Chaltin Pagan</strong></p>
+                            <p>Software Engineer, Project-Manager, Artist</p>
+                        </div>
+                    </div>
+                    <div className="bio">
+                        <img width="200px" height="200px" alt="Bio image 4" src={rzBio} />
+                        <div id="info">
+                            <p id="name"><strong>Romie Zelaya</strong></p>
+                            <p>Software Engineer, Amateur Photographer</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         )
     }
 }
