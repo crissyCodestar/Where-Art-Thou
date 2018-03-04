@@ -14,20 +14,16 @@ const defaultOptions = {
 class Map extends React.Component {
   constructor(props){
     super(props)
-
-  }
-
-  state = {
+this.state = {
     mapOptions: defaultOptions,
     arts: [],
     selectedArtId: null
   };
-
-  shouldComponentUpdate(nextProps, nextState) {
-    // Since this component does not depend on props, we only rerender when state changes
-    // So we avoid unneeded renders when parent (App) component rerenders
-    return this.state !== nextState;
   }
+
+
+
+
 
   componentDidMount() {
     // Get the 200 latest Art sightings
@@ -64,7 +60,6 @@ class Map extends React.Component {
     const { zoom } = mapOptions;
 
     const image = zoom >= 16 ? artImageM : zoom >= 14 ? artImageS : artImageXS;
-
     return (
       <GoogleMapReact
       bootstrapURLKeys={{
@@ -75,7 +70,7 @@ class Map extends React.Component {
         {...defaultOptions}
         {...mapOptions}
       >
-        {arts.map(art => (
+        {this.props.resultArr.map(art => (
           <MapMarker
             art={art}
             image={image}
@@ -92,4 +87,3 @@ class Map extends React.Component {
 }
 
 export default Map;
-
