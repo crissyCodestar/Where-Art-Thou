@@ -3,13 +3,14 @@ import glBio from '../../pics/GL_Bio.jpg';
 import cpBio from '../../pics/ChaltinBio.jpg';
 import cgBio from '../../pics/CrystalBio.jpg';
 import rzBio from '../../pics/RomieBio.jpg';
-
+import './About.css';
 
 class About extends Component{
 
     render(){
         return(
-            <div>
+            <div id="aboutDiv">
+                <h2>About Us </h2>
                 <h3> Mission </h3>
                     <p id="mission">
                     New York City is home to over a thousand art galleries, presenting diverse and beautiful art in every imaginable discipline. From the Bronx to Far Rockaway, there are galleries at almost every step, and some hidden treasures that even long-time residents know litte about. 
@@ -20,8 +21,9 @@ class About extends Component{
                 <h3> Team </h3>
                     <p>We are a team of creatives who are passionate about art, connections, and code.                       
                     </p>
+
                     <div id="bios">
-                    <div class="bio">
+                        <div class="bio">
                             <img width="200" alt="Bio image 1" src={cgBio}/>
                             Crystal Grant
                             software engineer, graphic designer
