@@ -24,22 +24,22 @@ class About extends Component {
 
                 <div id="bios">
                     <div className="bio">
-                        <p id="name">Crystal Grant</p>
+                        <p id="name"><strong>Crystal Grant</strong></p>
                         <img width="200" alt="Bio image 1" src={cgBio} />
                         <p>Software Engineer, Graphic Designer</p>
                     </div>
                     <div className="bio">
-                        <p id="name">Guzal Latypova</p>
+                        <p id="name"><strong>Guzal Latypova</strong></p>
                         <img width="200" alt="Bio image 2" src={glBio} />
                         <p>Software Engineer, Artist, Curator</p>
                     </div>
                     <div className="bio">
-                        <p id="name">Chaltin Pagan</p>
+                        <p id="name"><strong>Chaltin Pagan</strong></p>
                         <img width="200" alt="Bio image 3" src={cpBio} />
                         <p>Software Engineer, Project-Manager, Artist</p>
                     </div>
                     <div className="bio">
-                        <p id="name">Romie Zelaya</p>
+                        <p id="name"><strong>Romie Zelaya</strong></p>
                         <img width="200" alt="Bio image 4" src={rzBio} />
                         <p>Software Engineer, Amateur Photographer</p>
                     </div>

@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: #eaeaeb;
 }
 
 /* #searchBar {
@@ -39,4 +40,19 @@ h1 {
   float: left;
   margin-left: 350px;
   margin-top: 50px;
+}
+
+#footer {
+  /* border: 2px solid yellow; */
+  height: 50px;
+  background-color: #5b5b5b;
+  border-radius: 4px 4px 0 0 ;
+
+}
+
+#thanks {
+  text-align: center;
+  /* margin-top: 32px; */
+  margin: 0;
+  padding: 16px; 
 }

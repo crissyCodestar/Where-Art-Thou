@@ -19,13 +19,10 @@ class App extends Component {
             <Link to="/">Home</Link> {"  "}
             <Link to="/about">About</Link> {"  "}
           </div>
-          
           <h1>Where ART Thou</h1>
-
-
           <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
-
+          <footer id="footer"><p id="thanks"><strong>Thank You For Visitng</strong></p></footer>
         </div>
       </div>
     );

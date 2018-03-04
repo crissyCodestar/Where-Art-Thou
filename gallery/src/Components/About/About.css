@@ -5,7 +5,8 @@ h2{
 }
 
 h3 {
-    color: dimgrey
+    color: dimgrey;
+    font-size: 25px;
 }
 
 #mission {
@@ -13,25 +14,24 @@ h3 {
     margin-right: 15%;
     margin-bottom: 2%;
     color: dimgray;
+    font-size: 20px;
 }
 
 #name {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .bio {
     border: 4px solid #cac9c9;
-    width: 200px;
-    margin-left: 7%;
-    float: left;
-    height: 370px;
-    margin-bottom: 10%;
-    margin-top: 3%;
+    width: 250px;
+    height: 325px;
+    margin-bottom: 4%;
+    border-radius: 6px;
 }
 
 #desciption {
-    /* margin-bottom: 5%; */
     color: dimgray;
+    font-size: 20px;
 }
 
 #descriptionDiv {
@@ -43,4 +43,11 @@ h3 {
 
 .bio {
     color: dimgray;
+    background-color: white;
+}
+
+#bios {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
 }
