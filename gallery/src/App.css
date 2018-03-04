@@ -52,7 +52,7 @@ h1 {
 
 #thanks {
   text-align: center;
-  /* margin-top: 32px; */
   margin: 0;
-  padding: 16px; 
+  padding: 14px; 
+  font-size: 18px;
 }
