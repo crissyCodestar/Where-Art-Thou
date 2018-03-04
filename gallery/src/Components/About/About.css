@@ -1,3 +1,46 @@
 h2{
     margin-top: 200px;
+    font-size: 50px;
+    color: #5b5b5b;
+}
+
+h3 {
+    color: dimgrey
+}
+
+#mission {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2%;
+    color: dimgray;
+}
+
+#name {
+    font-size: 20px;
+}
+
+.bio {
+    border: 4px solid #cac9c9;
+    width: 200px;
+    margin-left: 7%;
+    float: left;
+    height: 370px;
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
+#desciption {
+    /* margin-bottom: 5%; */
+    color: dimgray;
+}
+
+#descriptionDiv {
+    border-bottom: 2px solid #5b5b5b;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.bio {
+    color: dimgray;
 }
