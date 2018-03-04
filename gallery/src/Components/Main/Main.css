@@ -1,3 +1,11 @@
+
+.Map {
+  border: solid 1px black;
+  height: 75vh;
+  width: 30vw;
+  float: right;
+}
+
 #searchBar {
     width: 85%;
     height: 50px;
@@ -43,3 +51,4 @@
     margin-top: 2%;
     height: 500px;;
  }
+
