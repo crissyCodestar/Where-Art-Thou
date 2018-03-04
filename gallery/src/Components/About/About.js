@@ -15,7 +15,7 @@ class About extends Component {
                     <h3> Mission </h3>
                     <p id="mission">
                         New York City is home to over a thousand art galleries, presenting diverse and beautiful art in every imaginable discipline. From the Bronx to Far Rockaway, there are galleries at almost every step, and some hidden treasures that even long-time residents know litte about.
-    
+
                         We created "Art deCode" with the vision that discovering and seeing new and amazing art is only a click away. With an easy to use interface our app allows to search for art galleries by simply typing in your zip code.
                     </p>
                 </div>
@@ -24,24 +24,32 @@ class About extends Component {
 
                 <div id="bios">
                     <div className="bio">
-                        <p id="name"><strong>Crystal Grant</strong></p>
-                        <img width="200" alt="Bio image 1" src={cgBio} />
-                        <p>Software Engineer, Graphic Designer</p>
+                        <img width="200px" height="200px" alt="Bio image 1" src={cgBio} />
+                        <div id="info">
+                            <p id="name"><strong>Crystal Grant</strong></p>
+                            <p>Software Engineer, Graphic Designer</p>
+                        </div>
                     </div>
                     <div className="bio">
-                        <p id="name"><strong>Guzal Latypova</strong></p>
-                        <img width="200" alt="Bio image 2" src={glBio} />
-                        <p>Software Engineer, Artist, Curator</p>
+                        <img width="200px" height="200px" alt="Bio image 2" src={glBio} />
+                        <div id="info">
+                            <p id="name"><strong>Guzal Latypova</strong></p>
+                            <p>Software Engineer, Artist, Curator</p>
+                        </div>
                     </div>
                     <div className="bio">
-                        <p id="name"><strong>Chaltin Pagan</strong></p>
-                        <img width="200" alt="Bio image 3" src={cpBio} />
-                        <p>Software Engineer, Project-Manager, Artist</p>
+                        <img width="200px" height="200px" alt="Bio image 3" src={cpBio} />
+                        <div id="info">
+                            <p id="name"><strong>Chaltin Pagan</strong></p>
+                            <p>Software Engineer, Project-Manager, Artist</p>
+                        </div>
                     </div>
                     <div className="bio">
-                        <p id="name"><strong>Romie Zelaya</strong></p>
-                        <img width="200" alt="Bio image 4" src={rzBio} />
-                        <p>Software Engineer, Amateur Photographer</p>
+                        <img width="200px" height="200px" alt="Bio image 4" src={rzBio} />
+                        <div id="info">
+                            <p id="name"><strong>Romie Zelaya</strong></p>
+                            <p>Software Engineer, Amateur Photographer</p>
+                        </div>
                     </div>
                 </div>
             </div>

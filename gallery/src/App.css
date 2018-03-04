@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #eaeaeb;
+  background-color: white;
 }
 
 /* #searchBar {
@@ -43,11 +43,8 @@ h1 {
 }
 
 #footer {
-  /* border: 2px solid yellow; */
   height: 50px;
-  background-color: #5b5b5b;
-  border-radius: 4px 4px 0 0 ;
-
+  background-color: #191919;
 }
 
 #thanks {
