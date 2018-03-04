@@ -16,7 +16,7 @@ class Main extends Component {
         this.state = {
             zipcode: "",
             resultArr: [],
-             selectedArt: null
+            selectedArt: null
         }
     }
 
@@ -49,11 +49,10 @@ class Main extends Component {
     };
 
     render(){
-      console.log(this.state.selectedArt)
-const { selectedArt } = this.state;
+    console.log(this.state.selectedArt)
+    const { selectedArt } = this.state;
         return(
             <div>
-                <h1>Where ART Thou</h1>
                 <div>
                     <input 
                         type="text" 
@@ -68,14 +67,14 @@ const { selectedArt } = this.state;
                 </button>
                 <label></label>
                 <div>
-                    <GoogleMap />
+                    {/*<GoogleMap />*/}
                     <Galleries resultArr={this.state.resultArr} />
                 </div>
             
 
-                Search By Zip Code:
+                {/*Search By Zip Code:
                 <input type="text" id="searchbar" onChange={this.handleChange}/>
-                <button id="submit" onClick={this.handleSubmit}>Submit</button>
+                <button id="submit" onClick={this.handleSubmit}>Submit</button>*/}
                 <Galleries resultArr={this.state.resultArr}/>
               <div className="Map">
                 <Map
