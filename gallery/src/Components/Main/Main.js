@@ -48,10 +48,14 @@ class Main extends Component {
                 </div>
                 <button 
                     id="submit" 
-                    onClick={this.handleSubmit}
-                    >Where ART Thou?</button>
-                <GoogleMap />
-                <Galleries resultArr={this.state.resultArr} />
+                    onClick={this.handleSubmit}>Where ART Thou?
+                </button>
+                <label></label>
+                <div>
+                    <GoogleMap />
+                    <Galleries resultArr={this.state.resultArr} />
+                </div>
+            
             </div>
         )
     }

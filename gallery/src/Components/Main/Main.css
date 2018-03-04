@@ -33,6 +33,13 @@
     height: 250px;
     float: left;
     width: 300px;
-    margin-right: 5%;
+    margin-right: 7%;
     display: inline-block;
 }
+ #map {
+    border: 2px solid black;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    height: 500px;;
+ }
