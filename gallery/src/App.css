@@ -9,8 +9,23 @@ body {
   text-align: center;
 } */
 
+#navbar{
+  float: top;
+}
+
+#headerImgDiv{
+  height: 160px;
+}
+
+#headerImg{
+  z-index: -1;
+  width: 100%;
+  height: 520px;
+}
+
 h1 {
   font-size: 100px;
+  color:white;
 }
 
 #searchIcon {
