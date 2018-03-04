@@ -70,12 +70,7 @@ class Main extends Component {
                     {/*<GoogleMap />*/}
                     <Galleries resultArr={this.state.resultArr} />
                 </div>
-            
 
-                {/*Search By Zip Code:
-                <input type="text" id="searchbar" onChange={this.handleChange}/>
-                <button id="submit" onClick={this.handleSubmit}>Submit</button>*/}
-                <Galleries resultArr={this.state.resultArr}/>
               <div className="Map">
                 <Map
                   google={this.props.google}
