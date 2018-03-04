@@ -26,7 +26,7 @@
     float: left;
 }
 
-#galleryList {
+/* #galleryList {
     float: left;
     margin-left:5%;
     margin-right: 5%;
@@ -43,7 +43,7 @@
     width: 300px;
     margin-right: 7%;
     display: inline-block;
-}
+} */
  #map {
     border: 2px solid black;
     margin-left: 20%;
