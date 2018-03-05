@@ -42,16 +42,18 @@ a:visited{
   margin-top: 220px;
 } */
 
-#footer {
+/* #footer {
   height: 50px;
   background-color: #191919;
-  /* position: fixed;  */
+  position: fixed; 
 }
+*/
+
 
 #thanks {
   text-align: center;
   margin: 0;
-  padding: 14px; 
+  padding: 14px;
   font-size: 18px;
 }
 
@@ -65,7 +67,9 @@ a:visited{
   z-index: 0;
 }
 
+
 #homePage {
   display: flex;
   justify-content: space-around;
 }
+
