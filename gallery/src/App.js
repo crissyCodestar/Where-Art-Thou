@@ -8,13 +8,14 @@ import headerImg from "./pics/pexels-photo-110818.jpg";
 
 class App extends Component {
 
-  
+
 
   render() {
     return (
       <div>
         <div>
           <div id="headerImgDiv">
+
           <div id="navbar">
             <Link to="/">Home</Link> {"  "}
             <Link to="/about">About</Link> {"  "}

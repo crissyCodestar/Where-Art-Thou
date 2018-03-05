@@ -3,13 +3,6 @@ body {
   background-color: white;
 }
 
-/* #searchBar {
-  width: 85%;
-  height: 50px;
-  font-size: 40px;
-  text-align: center;
-} */
-
 #navbar{
   z-index: 1;
   color: white;
@@ -44,14 +37,9 @@ a:visited{
   margin-right: 15px;
 }
 
-.mapDiv {
-  width: 600px;
-  height: 500px;
-  border: black solid 2px;
-  float: left;
-  margin-left: 350px;
-  margin-top: 50px;
-}
+/* .Map {
+  margin-top: 220px;
+} */
 
 #footer {
   height: 50px;
@@ -64,3 +52,13 @@ a:visited{
   padding: 14px; 
   font-size: 18px;
 }
+
+#title {
+  margin-top: 0;
+}
+
+#testing {
+  border: 2px solid yellow;
+  z-index: 0;
+}
+
