@@ -65,9 +65,7 @@ class Main extends Component {
                     id="submit" 
                     onClick={this.handleSubmit}>Where ART Thou?
                 </button>
-                <label></label>
-                <div>
-                    {/*<GoogleMap />*/}
+                <div id="results">
                     <Galleries resultArr={this.state.resultArr} />
                 </div>
 
