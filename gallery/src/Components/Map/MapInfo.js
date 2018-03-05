@@ -1,16 +1,16 @@
 
 import React from "react";
-
+import './Map.css'
 
 const MapInfo = art => {
 console.log(art)
   return (
-    <div>
-    Gallery Name: {art.name} <br />
-      Address: {art.address1} <br />
-      City: {art.city} <br />
-       Tele: {art.tel}<br />
-
+    <div className="galleryInfo">
+    <h3>{art.name}</h3>
+    <p>{art.address1}</p>
+       <p>{art.city}, NY </p>
+        <p>{art.tel}</p>
+<a rel="unfollow" target="_blank" href={art.url}>Visit {art.name}</a>
     </div>
   );
 };

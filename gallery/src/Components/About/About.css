@@ -41,7 +41,7 @@ h3 {
 }
 
 #descriptionDiv {
-    border-bottom: 2px solid #00c9a4;
+    border-bottom: 2px solid rgba(0,201,164,.49);
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;

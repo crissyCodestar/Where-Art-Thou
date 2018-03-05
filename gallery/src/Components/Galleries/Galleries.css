@@ -1,0 +1,50 @@
+
+
+ol {
+    counter-reset: li;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,.1);
+    margin: 0;
+    padding: 0px;
+    border-radius: 4px;
+  }
+
+  ol li {
+    float: left;
+    clear: left;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+  }
+
+  ol,
+  ol li { display: block; }
+
+
+
+  li span {
+    cursor: pointer;
+    display: block;
+    line-height: .90em;
+    padding-right: 10px;
+    padding-left: 10px;
+
+  }
+
+li:hover{
+    background-color: rgba(221,215,215,.25);
+  }
+
+  /* Style the title, date & comments of each entry */
+  span.link-title {
+    letter-spacing: .2px;
+    text-transform: uppercase;
+    padding-top: 5px;
+    font-size: 1.2em;
+  }
+
+  span.link-excerpt {
+  color: rgba(0,0,0,.57);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0,0,0,.10);
+}

@@ -23,17 +23,23 @@ class Galleries extends Component {
       console.log("In GALL: ",this.state.selectedArtId)
         const {resultArr} = this.props;
         return(
-            <div >
-                <div id="galleryList">
+            <div>
+                <ol id="galleryList">
                 {resultArr.map ((art) => (
-                    <div> <p id="renderedGallery"
+                  <div id="divLi">
+                    <li> <span className="link-title"
                       onClick={() => this.onArtClick(art)}>
-                    {art.name} - {art.address1}
-                    </p></div>
+                    {art.name}
+                    </span><br />
+                    <span className="link-excerpt">
+                     {art.address1}
+                    </span>
+                    </li>
+                    </div>
                 ))}
 
 
-                </div>
+                </ol>
             </div>
         )
     }
