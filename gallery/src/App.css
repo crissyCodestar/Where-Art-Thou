@@ -45,6 +45,7 @@ a:visited{
 #footer {
   height: 50px;
   background-color: #191919;
+  /* position: fixed;  */
 }
 
 #thanks {
@@ -64,3 +65,7 @@ a:visited{
   z-index: 0;
 }
 
+#homePage {
+  display: flex;
+  justify-content: space-around;
+}
