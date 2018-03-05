@@ -6,3 +6,10 @@
 .art.selected {
   transform: scale(1);
 }
+
+.galleryInfo {
+  text-align: left;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+}

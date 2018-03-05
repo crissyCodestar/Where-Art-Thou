@@ -85,6 +85,7 @@ class Main extends Component {
         return(
 
             <div>
+
                 <div>
                     <input
                         type="text"
@@ -94,7 +95,7 @@ class Main extends Component {
                     />
                 </div>
                 <button
-                    id="submit"
+                    className="submit"
                     onClick={this.handleSubmit}>Where ART Thou?
                 </button>
 
@@ -105,7 +106,9 @@ class Main extends Component {
                     onArtClick={this.onArtClick} />
                 </div>
                     <div id="address">
-                        {selectedArt ? MapInfo(selectedArt) : <p><strong> Gallery </strong></p>}
+                        {selectedArt ? MapInfo(selectedArt) :
+                          <Featured />
+                         }
                     </div>
                 <div className="Map">
                 <Map
@@ -116,9 +119,7 @@ class Main extends Component {
                   resultArr={this.state.resultArr}
                   />
                 </div>
-                <div>
-                  {selectedArt ? MapInfo(selectedArt) : null }
-                </div>
+
                 </div>
 
             </div>
@@ -126,19 +127,21 @@ class Main extends Component {
     }
 }
 
-//
-// const Featured=(arts)=>{
-//   console.log(this.props)
-//
-//   return(
-//     <div>
-//
-//       <div>
-//       {arts.name}
-//       </div>
-//
-//     </div>
-//   )
-// }
+
+const Featured=()=>{
+
+
+  return(
+    <div>
+
+      <div>
+          <h2>
+            Locate art galleries close to you or find a cool place to hangout and discover new artists
+          </h2>
+      </div>
+
+    </div>
+  )
+}
 
 export default Main;
