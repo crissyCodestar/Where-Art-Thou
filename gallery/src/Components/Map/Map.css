@@ -8,8 +8,15 @@
 }
 
 .galleryInfo {
-  text-align: left;
-  height: 200px;
+  text-align: center;
+  height: 150px;
   padding: 0;
-  margin: 0;
+  margin-top: -10px;
+
+}
+.artsite:hover{
+  color: #9d9d9d;
+}
+.artsite{
+  color: #00c9a4;
 }

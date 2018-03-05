@@ -135,9 +135,12 @@ const Featured=()=>{
     <div>
 
       <div>
-          <h2>
-            Locate art galleries close to you or find a cool place to hangout and discover new artists
-          </h2>
+
+          <h1>Welcome</h1>
+          <p id="quote">Art, freedom and creativity will change society faster than politics.</p>
+          <h3>-Victor Pinchuk</h3>
+
+
       </div>
 
     </div>
