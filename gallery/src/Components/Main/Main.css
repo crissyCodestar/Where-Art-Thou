@@ -1,4 +1,8 @@
 
+h1{
+  font-size: 2.8em;
+}
+
 .Map {
   border: solid 2px rgba(0,0,0,.17);
   height: 90vh;
@@ -47,6 +51,9 @@ outline:none;
 }
 
 
+#quote{
+  font-size: 2em;
+}
 
 #galleryList {
   height: 90vh;

@@ -10,7 +10,7 @@ console.log(art)
     <p>{art.address1}</p>
        <p>{art.city}, NY </p>
         <p>{art.tel}</p>
-<a rel="unfollow" target="_blank" href={art.url}>Visit {art.name}</a>
+<a className="artsite" rel="unfollow" target="_blank" href={art.url}>Visit {art.name}</a>
     </div>
   );
 };

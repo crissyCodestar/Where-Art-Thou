@@ -1,6 +1,10 @@
 body {
   text-align: center;
   background-color: white;
+  /* font-family: 'Lato', sans-serif; */
+  /* font-family: 'Exo', sans-serif; */
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Work Sans', sans-serif;
 }
 
 #navbar{
@@ -18,12 +22,13 @@ body {
   bottom: 90px;
   margin: 0px
 }
-a{
+.head{
+  color: #fff;
+}
+.head:hover{
   color: #00c9a4;
 }
-a:hover{
-  color: #9d9d9d;
-}
+
 
 *::-webkit-input-placeholder{
   color: #fff;
