@@ -1,10 +1,9 @@
 
 .Map {
   border: solid 1px black;
-  height: 75vh;
+  height: 400px;
   width: 30vw;
   float: right;
-  margin-top: 67px;
 }
 
 #searchBar {
@@ -15,7 +14,6 @@
     font-size: 40px;
     text-align: center;
     border-radius: 4px;
-    margin-top: 10px;;
 }
 
 #submit {
@@ -31,34 +29,32 @@
     height: 400px;
     width: 400px;
     float: left;
-    margin-top: 220px;
+    /* margin-top: 220px; */
+    border-right: 2px solid #5b5b5b;
+    overflow-y:scroll;
 }
-
- /* #galleryList {
-    float: left;
-    margin-left:5%;
-    margin-right: 5%;
-    width: 100%;
-    padding: 30px;
-} */
 
 #renderedGallery {
     text-align: left;
     margin-left: 40px;
-    /* word-wrap: break-word;
-    border: 2px solid black;
-    height: 250px;
-    float: left;
-    width: 300px;
-    margin-right: 7%;
-    display: inline-block; */
 } 
 
- #map {
+#map {
     border: 2px solid black;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 2%;
     height: 500px;;
- }
+}
 
+/* #render {
+    border-right: 2px solid black;
+} */
+
+#address {
+    /* border: solid black 2px; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+    font-size: 25px;
+}

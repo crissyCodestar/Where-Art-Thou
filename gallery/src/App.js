@@ -15,14 +15,12 @@ class App extends Component {
       <div>
         <div>
           <div id="headerImgDiv">
-
-          <div id="navbar">
-            <Link to="/">Home</Link> {"  "}
-            <Link to="/about">About</Link> {"  "}
-          </div>        
-          <h3 className="headerTitle">Where ART Thou</h3>
-           </div>
-
+            <div id="navbar">
+              <Link to="/">Home</Link> {"  "}
+              <Link to="/about">About</Link> {"  "}
+            </div>
+            <h3 className="headerTitle">Where ART Thou</h3>
+          </div>
           <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
           <footer id="footer"><p id="thanks"><strong></strong></p></footer>

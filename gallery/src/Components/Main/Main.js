@@ -29,59 +29,59 @@ class Main extends Component {
 
     handleSubmit = () => {
         axios
-        .get(
-          `https://data.cityofnewyork.us/resource/43hw-uvdj.json?zip=${this.state.zipcode}`
-        )
-        .then(res => {
-          console.log(res.data)
+            .get(
+                `https://data.cityofnewyork.us/resource/43hw-uvdj.json?zip=${this.state.zipcode}`
+            )
+            .then(res => {
+                console.log(res.data)
 
-          this.setState({
-            resultArr: res.data
-          });
-        })
-        .catch(err => {
-          console.log("error fetching galleries");
-        });
+                this.setState({
+                    resultArr: res.data
+                });
+            })
+            .catch(err => {
+                console.log("error fetching galleries");
+            });
     }
 
     onArtClick = art => {
-      this.setState({ selectedArt: art });
+        this.setState({ selectedArt: art });
     };
 
-    render(){
-    console.log(this.state.selectedArt)
-    const { selectedArt } = this.state;
-        return(
+    render() {
+        console.log(this.state.selectedArt)
+        const { selectedArt } = this.state;
+        return (
             <div>
                 <div>
-                    <input 
-                        type="text" 
-                        id="searchBar" 
-                        placeholder="Search by Zip Code" 
+                    <input
+                        type="text"
+                        id="searchBar"
+                        placeholder="Search by Zip Code"
                         onChange={this.handleChange}
                     />
                 </div>
-                <button 
-                    id="submit" 
+                <button
+                    id="submit"
                     onClick={this.handleSubmit}>Where ART Thou?
                 </button>
-                <div id="results">
-                    <Galleries resultArr={this.state.resultArr} />
+                <div id="homePage">
+                    <div id="results">
+                        <Galleries resultArr={this.state.resultArr} />
+                    </div>
+                    <div id="address">
+                        {selectedArt ? MapInfo(selectedArt) : <p><strong> Gallery </strong></p>}
+                    </div>
+                    <div className="Map">
+                        <Map
+                            google={this.props.google}
+                            onArtClick={this.onArtClick}
+                            containerElement={<div style={{ height: `100%` }} />}
+                            mapElement={<div style={{ height: `100%` }} />}
+                            resultArr={this.state.resultArr}
+                        />
+                    </div>
                 </div>
-
-              <div className="Map">
-                <Map
-                  google={this.props.google}
-                  onArtClick={this.onArtClick}
-                  containerElement={<div style={{ height: `100%` }} />}
-                  mapElement={<div style={{ height: `100%` }} />}
-                  resultArr={this.state.resultArr}
-                  />
-                </div>
-                <div>
-                  {selectedArt ? MapInfo(selectedArt) : <strong> Gallery </strong>}
-                </div>
-
             </div>
         )
     }
