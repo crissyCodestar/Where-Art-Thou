@@ -12,6 +12,7 @@ class Galleries extends Component {
         return (
             <div >
                 <div id="galleryList">
+                <p id="gallery"><strong>Gallery List</strong></p>
                     {resultArr.map((el, i) => (
                         <div id="render">
                             <p id="renderedGallery" key={i}> {el.name} - {el.address1}</p>

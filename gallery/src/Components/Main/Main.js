@@ -10,6 +10,7 @@ import MapInfo from "../Map/MapInfo";
 
 import './Main.css';
 
+
 class Main extends Component {
     constructor() {
         super();
@@ -70,7 +71,7 @@ class Main extends Component {
                         <Galleries resultArr={this.state.resultArr} />
                     </div>
                     <div id="address">
-                        {selectedArt ? MapInfo(selectedArt) : <p><strong> Gallery </strong></p>}
+                        {selectedArt ? MapInfo(selectedArt) : <p id="gaddress"><strong>Gallery Address</strong></p>}
                     </div>
                     <div className="Map">
                         <Map
