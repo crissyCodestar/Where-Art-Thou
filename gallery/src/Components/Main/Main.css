@@ -19,7 +19,7 @@ h1{
 
 #searchBar {
     position:relative;
-    bottom: 130px;
+    bottom: 140px;
     width: 75%;
     height: 50px;
     font-size: 35px;
@@ -33,9 +33,9 @@ h1{
 .submit {
     height: 8%;
     border-radius: 16px;
-   margin-top: 5px;
+    margin-top: 5px;
     position:relative;
-    bottom: 110px;
+    bottom: 120px;
     font-size: 20px;
     width: 15%;
 

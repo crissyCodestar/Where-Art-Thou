@@ -19,7 +19,7 @@ body {
   font-size: 80px;
   color:white;
   position:relative;
-  bottom: 90px;
+  bottom: 100px;
   margin: 0px
 }
 .head{
@@ -34,7 +34,7 @@ body {
   color: #fff;
 }
 #headerImgDiv{
-  height: 450px;
+  height: 500px;
   background-image: url("./pics/pexels-photo-110818.jpg");
   display: flex;
   flex-direction: column;

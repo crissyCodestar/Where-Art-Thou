@@ -82,11 +82,12 @@ class Main extends Component {
 
     console.log(this.state.selectedArt)
     const { selectedArt } = this.state;
+    const {resultArr} = this.state;
         return(
 
             <div>
 
-                <div>
+                <div id="searchdiv">
                     <input
                         type="text"
                         id="searchBar"
@@ -103,7 +104,8 @@ class Main extends Component {
                     <div id="results">
                     <Galleries
                     resultArr={this.state.resultArr}
-                    onArtClick={this.onArtClick} />
+                    onArtClick={this.onArtClick} /> 
+ 
                 </div>
                     <div id="address">
                         {selectedArt ? MapInfo(selectedArt) :
@@ -146,5 +148,7 @@ const Featured=()=>{
     </div>
   )
 }
+
+
 
 export default Main;
