@@ -11,6 +11,7 @@ body {
 
 #navbar{
   float: top;
+  margin-bottom: -5%;
 }
 
 #headerImgDiv{
@@ -38,5 +39,6 @@ h1 {
   border: black solid 2px;
   float: left;
   margin-left: 350px;
-  margin-top: 50px;
+  margin-bottom: 50px;
+
 }

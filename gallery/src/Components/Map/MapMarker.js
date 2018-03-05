@@ -7,6 +7,7 @@ const MapMarker = ({ art, image, onArtClick, selected }) => (
     alt=""
     src={image}
     onClick={() => onArtClick(art)}
+    
   />
 );
 

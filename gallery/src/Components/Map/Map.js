@@ -8,7 +8,7 @@ import MapMarker from "./MapMarker";
 
 const defaultOptions = {
   defaultCenter: {lat:40.727505, lng:-73.969217},
-  defaultZoom: 12
+  defaultZoom: 13
 };
 
 class Map extends React.Component {
@@ -17,7 +17,8 @@ class Map extends React.Component {
 this.state = {
     mapOptions: defaultOptions,
     arts: [],
-    selectedArtId: null
+    selectedArtId: null,
+    currentCenter:defaultOptions.defaultCenter
   };
   }
 
@@ -26,7 +27,6 @@ this.state = {
 
 
   componentDidMount() {
-    // Get the 200 latest Art sightings
     axios
       .get(
         "https://data.cityofnewyork.us/resource/43hw-uvdj.json?"+
@@ -55,10 +55,34 @@ this.state = {
     this.setState({ selectedArtId: art.unique_key });
   };
 
+  getNewCenter= results =>{
+    console.log(results)
+if(results.length === 0){
+  return this.state.center
+}
+    let lats=results.map((art)=> {
+
+      return art.the_geom.coordinates[1]
+    })
+    let lngs=results.map((art)=> {
+      return art.the_geom.coordinates[0]
+    })
+
+    let minLat = Math.min(...lats)
+    let maxLat = Math.max(...lats)
+    let minLng = Math.min(...lngs)
+    let maxLng = Math.max(...lngs)
+
+    let newLat = (minLat + maxLat) /2
+    let newLng = (minLng + maxLng) /2
+    return   {lat:newLat, lng:newLng}
+  }
+
   render() {
     const { arts, mapOptions, selectedArtId } = this.state;
     const { zoom } = mapOptions;
-
+    this.state.currentCenter = this.getNewCenter(this.props.resultArr)
+    console.log(this.state.center)
     const image = zoom >= 16 ? artImageM : zoom >= 14 ? artImageS : artImageXS;
     return (
       <GoogleMapReact
@@ -69,6 +93,7 @@ this.state = {
         onChange={this.onMapChange}
         {...defaultOptions}
         {...mapOptions}
+        center={this.state.currentCenter}
       >
         {this.props.resultArr.map(art => (
           <MapMarker
