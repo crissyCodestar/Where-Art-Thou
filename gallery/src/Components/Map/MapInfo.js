@@ -6,10 +6,10 @@ const MapInfo = art => {
 
   return (
     <div>
-    Gallery Name: {art.name} <br />
-      Address: {art.address1} <br />
-      City: {art.city} <br />
-       Tele: {art.tel}
+    <p id="galleryName"><strong>{art.name}</strong></p> <br />
+    {art.address1} <br />
+    {art.city} <br />
+    {art.tel}
     </div>
   );
 };

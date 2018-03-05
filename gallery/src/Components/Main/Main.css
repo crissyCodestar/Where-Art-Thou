@@ -53,8 +53,8 @@
 
 #address {
     /* border: solid black 2px; */
-    display: flex;
-    justify-content: space-around;
+    /* display: flex;
+    justify-content: space-around; */
     margin-top: 10%;
     font-size: 25px;
 }
@@ -62,8 +62,14 @@
 #gallery {
     margin-top: 10%;
     font-size: 25px;
+    color: #282727;
 }
 
 #gaddress {
     margin-top: -85px;
+    color: #282727;
+}
+
+#galleryName {
+    margin-bottom: -8%; 
 }

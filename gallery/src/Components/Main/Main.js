@@ -71,7 +71,8 @@ class Main extends Component {
                         <Galleries resultArr={this.state.resultArr} />
                     </div>
                     <div id="address">
-                        {selectedArt ? MapInfo(selectedArt) : <p id="gaddress"><strong>Gallery Address</strong></p>}
+                        <p id="gaddress"><strong>Gallery Address</strong></p>
+                        {selectedArt ? MapInfo(selectedArt) : <p id="gaddress"><strong></strong></p>}
                     </div>
                     <div className="Map">
                         <Map
