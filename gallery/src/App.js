@@ -24,6 +24,8 @@ class App extends Component {
 
           <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
+          <footer id="footer"><p id="thanks"><strong></strong></p></footer>
+
         </div>
       </div>
     );
