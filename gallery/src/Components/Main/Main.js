@@ -57,24 +57,25 @@ class Main extends Component {
 
     handleSubmit = () => {
         axios
-        .get(
-          `https://data.cityofnewyork.us/resource/43hw-uvdj.json?zip=${this.state.zipcode}`
-        )
-        .then(res => {
-          console.log(res.data)
+            .get(
+                `https://data.cityofnewyork.us/resource/43hw-uvdj.json?zip=${this.state.zipcode}`
+            )
+            .then(res => {
+                console.log(res.data)
 
-          this.setState({
-            resultArr: res.data
-          });
-        })
-        .catch(err => {
-          console.log("error fetching galleries");
-        });
+                this.setState({
+                    resultArr: res.data
+                });
+            })
+            .catch(err => {
+                console.log("error fetching galleries");
+            });
     }
 
     onArtClick = art => {
-      this.setState({ selectedArt: art });
+        this.setState({ selectedArt: art });
     };
+
 
     render(){
       console.log(this.state.arts)
@@ -82,6 +83,7 @@ class Main extends Component {
     console.log(this.state.selectedArt)
     const { selectedArt } = this.state;
         return(
+
             <div>
                 <div>
                     <input
@@ -95,13 +97,17 @@ class Main extends Component {
                     id="submit"
                     onClick={this.handleSubmit}>Where ART Thou?
                 </button>
-                <div id="results">
+
+                <div id="homePage">
+                    <div id="results">
                     <Galleries
                     resultArr={this.state.resultArr}
                     onArtClick={this.onArtClick} />
                 </div>
-
-              <div className="Map">
+                    <div id="address">
+                        {selectedArt ? MapInfo(selectedArt) : <p><strong> Gallery </strong></p>}
+                    </div>
+                <div className="Map">
                 <Map
                   google={this.props.google}
                   onArtClick={this.onArtClick}
@@ -112,6 +118,7 @@ class Main extends Component {
                 </div>
                 <div>
                   {selectedArt ? MapInfo(selectedArt) : null }
+                </div>
                 </div>
 
             </div>

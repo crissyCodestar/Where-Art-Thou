@@ -45,8 +45,10 @@ a:visited{
 /* #footer {
   height: 50px;
   background-color: #191919;
-  bottom: 0;
-} */
+  position: fixed; 
+}
+*/
+
 
 #thanks {
   text-align: center;
@@ -64,3 +66,10 @@ a:visited{
   border: 2px solid yellow;
   z-index: 0;
 }
+
+
+#homePage {
+  display: flex;
+  justify-content: space-around;
+}
+

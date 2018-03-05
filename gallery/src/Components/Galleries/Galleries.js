@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import {Link, Route, Switch} from 'react-router-dom';
 import './Galleries.css'
+import { Link, Route, Switch } from 'react-router-dom';
 
-class Galleries extends Component{
-    constructor(props){
+
+class Galleries extends Component {
+    constructor(props) {
         super(props);
         this.state={
           selectedArtId: null
         }
     }
+
 
 
     onArtClick = art => {
@@ -29,6 +31,7 @@ class Galleries extends Component{
                     {art.name} - {art.address1}
                     </p></div>
                 ))}
+
 
                 </div>
             </div>
