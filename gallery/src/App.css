@@ -42,15 +42,16 @@ a:visited{
   margin-top: 220px;
 } */
 
-#footer {
+/* #footer {
   height: 50px;
   background-color: #191919;
-}
+  bottom: 0;
+} */
 
 #thanks {
   text-align: center;
   margin: 0;
-  padding: 14px; 
+  padding: 14px;
   font-size: 18px;
 }
 
@@ -63,4 +64,3 @@ a:visited{
   border: 2px solid yellow;
   z-index: 0;
 }
-
