@@ -15,25 +15,18 @@ class App extends Component {
       <div>
         <div>
           <div id="headerImgDiv">
-            <img
-              id="headerImg"
-              src={headerImg}
-              alt="header image" />
-          </div>
-          <div id="testing">
-            <div id="navbar">
-              <Link to="/">Home</Link> {"  "}
-              <Link to="/about">About</Link> {"  "}
-            </div>
-            <h1 id="title">Where ART Thou</h1>
-          </div>
+
+          <div id="navbar">
+            <Link to="/">Home</Link> {"  "}
+            <Link to="/about">About</Link> {"  "}
+          </div>        
+          <h3 className="headerTitle">Where ART Thou</h3>
+           </div>
+
           <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
-          <footer id="footer">
-            <p id="thanks">
-              <strong></strong>
-            </p>
-          </footer>
+          <footer id="footer"><p id="thanks"><strong></strong></p></footer>
+
         </div>
       </div>
     );

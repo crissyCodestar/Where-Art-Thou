@@ -8,6 +8,8 @@
 }
 
 #searchBar {
+    position:relative;
+    bottom: 120px;
     width: 85%;
     height: 50px;
     font-size: 40px;
@@ -19,7 +21,10 @@
 #submit {
     height: 25px;
     border-radius: 6px;
-    margin-top: 15px;
+   margin-top: 10px;
+    position:relative;
+    bottom: 100px;
+
 }
 
 #galleryList {
