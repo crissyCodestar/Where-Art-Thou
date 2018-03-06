@@ -71,5 +71,8 @@
 }
 
 #galleryName {
-    margin-bottom: -8%; 
+    margin-bottom: -8%;
+    font-size: 21px; 
+    color: #282727;
+    
 }
