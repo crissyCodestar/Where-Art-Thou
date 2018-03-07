@@ -24,28 +24,28 @@ class About extends Component {
 
                 <div id="bios">
                     <div className="bio">
-                        <img width="200px" height="200px" alt="Bio image 1" src={cgBio} />
+                        <img width="200px" height="200px" alt="Bio 1" src={cgBio} />
                         <div id="info">
                             <p id="name"><strong>Crystal Grant</strong></p>
                             <p>Software Engineer, Graphic Designer</p>
                         </div>
                     </div>
                     <div className="bio">
-                        <img width="200px" height="200px" alt="Bio image 2" src={glBio} />
+                        <img width="200px" height="200px" alt="Bio 2" src={glBio} />
                         <div id="info">
                             <p id="name"><strong>Guzal Latypova</strong></p>
                             <p>Software Engineer, Artist, Curator</p>
                         </div>
                     </div>
                     <div className="bio">
-                        <img width="200px" height="200px" alt="Bio image 3" src={cpBio} />
+                        <img width="200px" height="200px" alt="Bio 3" src={cpBio} />
                         <div id="info">
                             <p id="name"><strong>Chaltin Pagan</strong></p>
                             <p>Software Engineer, Project-Manager, Artist</p>
                         </div>
                     </div>
                     <div className="bio">
-                        <img width="200px" height="200px" alt="Bio image 4" src={rzBio} />
+                        <img width="200px" height="200px" alt="Bio 4" src={rzBio} />
                         <div id="info">
                             <p id="name"><strong>Romie Zelaya</strong></p>
                             <p>Software Engineer, Amateur Photographer</p>

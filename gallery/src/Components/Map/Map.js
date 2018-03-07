@@ -1,24 +1,24 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
-import axios from "axios";
+// import axios from "axios";
 import artImageXS from "./art_images/art_xs.png";
 import artImageS from "./art_images/art_s.png";
 import artImageM from "./art_images/art_m.png";
 import MapMarker from "./MapMarker";
 
 const defaultOptions = {
-  defaultCenter: {lat:40.727505, lng:-73.969217},
+  defaultCenter: { lat: 40.727505, lng: -73.969217 },
   defaultZoom: 13
 };
 
 class Map extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
-this.state = {
-    mapOptions: defaultOptions,
-    arts: [],
-    selectedArtId: null,
-    currentCenter:defaultOptions.defaultCenter
+    this.state = {
+      mapOptions: defaultOptions,
+      arts: [],
+      selectedArtId: null,
+      currentCenter: defaultOptions.defaultCenter
     };
   }
 
@@ -32,16 +32,16 @@ this.state = {
     this.setState({ selectedArtId: art.unique_key });
   };
 
-  getNewCenter= results =>{
+  getNewCenter = results => {
     console.log(results)
-if(results.length === 0){
-  return this.state.center
-}
-    let lats=results.map((art)=> {
+    if (results.length === 0) {
+      return this.state.center
+    }
+    let lats = results.map((art) => {
 
       return art.the_geom.coordinates[1]
     })
-    let lngs=results.map((art)=> {
+    let lngs = results.map((art) => {
       return art.the_geom.coordinates[0]
     })
 
@@ -50,13 +50,13 @@ if(results.length === 0){
     let minLng = Math.min(...lngs)
     let maxLng = Math.max(...lngs)
 
-    let newLat = (minLat + maxLat) /2
-    let newLng = (minLng + maxLng) /2
-    return   {lat:newLat, lng:newLng}
+    let newLat = (minLat + maxLat) / 2
+    let newLng = (minLng + maxLng) / 2
+    return { lat: newLat, lng: newLng }
   }
 
   render() {
-    const { arts, mapOptions, selectedArtId } = this.state;
+    const { mapOptions, selectedArtId } = this.state;
     const { zoom } = mapOptions;
     console.log("In MAPS: ", this.state.selectedArtId)
     this.state.currentCenter = this.getNewCenter(this.props.resultArr)
@@ -64,9 +64,9 @@ if(results.length === 0){
     const image = zoom >= 16 ? artImageM : zoom >= 14 ? artImageS : artImageXS;
     return (
       <GoogleMapReact
-      bootstrapURLKeys={{
-        key: "AIzaSyDb6zW26qmHqJJyXuZRigtknsqzWc3oVuU&v=3.31"
-      }}
+        bootstrapURLKeys={{
+          key: "AIzaSyDb6zW26qmHqJJyXuZRigtknsqzWc3oVuU&v=3.31"
+        }}
         options={this.createMapOptions}
         onChange={this.onMapChange}
         {...defaultOptions}
