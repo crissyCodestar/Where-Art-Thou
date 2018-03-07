@@ -94,31 +94,6 @@ outline:none;
 
 #address {
     /* border: solid black 2px; */
-<<<<<<< HEAD
-    /* display: flex;
-    justify-content: space-around; */
-    margin-top: 10%;
-    font-size: 25px;
-}
-
-#gallery {
-    margin-top: 10%;
-    font-size: 25px;
-    color: #282727;
-}
-
-#gaddress {
-    margin-top: -85px;
-    color: #282727;
-}
-
-#galleryName {
-    margin-bottom: -8%;
-    font-size: 21px; 
-    color: #282727;
-    
-}
-=======
     height: 90vh;
     width: 30vw;
     display: flex;
@@ -126,4 +101,3 @@ outline:none;
     margin-top: 10%;
     font-size: 25px;
 }
->>>>>>> 310b76f730ad6ed58b7ca299f2c795a8bad6fc7e

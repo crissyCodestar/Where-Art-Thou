@@ -11,10 +11,6 @@ import MapInfo from "../Map/MapInfo";
 import './Main.css';
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 310b76f730ad6ed58b7ca299f2c795a8bad6fc7e
 class Main extends Component {
     constructor() {
         super();
@@ -109,23 +105,9 @@ class Main extends Component {
                     onArtClick={this.onArtClick} />
                 </div>
                     <div id="address">
-<<<<<<< HEAD
-                        <p id="gaddress"><strong>Gallery Address</strong></p>
-                        {selectedArt ? MapInfo(selectedArt) : <p id="gaddress"><strong></strong></p>}
-                    </div>
-                    <div className="Map">
-                        <Map
-                            google={this.props.google}
-                            onArtClick={this.onArtClick}
-                            containerElement={<div style={{ height: `100%` }} />}
-                            mapElement={<div style={{ height: `100%` }} />}
-                            resultArr={this.state.resultArr}
-                        />
-=======
                         {selectedArt ? MapInfo(selectedArt) :
                           <Featured />
                          }
->>>>>>> 310b76f730ad6ed58b7ca299f2c795a8bad6fc7e
                     </div>
                 <div className="Map">
                 <Map
