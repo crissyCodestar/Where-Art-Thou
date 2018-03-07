@@ -1,4 +1,5 @@
 h2{
+
     margin-top: 20px;
     font-size: 50px;
     color: #5b5b5b;
@@ -40,7 +41,7 @@ h3 {
 }
 
 #descriptionDiv {
-    border-bottom: 2px solid #5b5b5b;
+    border-bottom: 2px solid rgba(0,201,164,.49);
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;

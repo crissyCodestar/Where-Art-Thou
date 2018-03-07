@@ -19,35 +19,12 @@ this.state = {
     arts: [],
     selectedArtId: null,
     currentCenter:defaultOptions.defaultCenter
-  };
+    };
   }
 
 
 
 
-
-  componentDidMount() {
-    axios
-      .get(
-        "https://data.cityofnewyork.us/resource/43hw-uvdj.json?"+
-          "&$limit=200"
-      )
-      .then(res => {
-        console.log(res.data.unique_key)
-        this.setState({
-          arts: res.data.filter(art => art.the_geom && art.the_geom.coordinates)
-        });
-      })
-      .catch(err => {
-        console.log("error fetching arts");
-      });
-  }
-
-  onMapChange = options => {
-    this.setState({
-      mapOptions: options
-    });
-  };
 
   onArtClick = art => {
     console.log("clicked on: ", art);
@@ -81,6 +58,7 @@ if(results.length === 0){
   render() {
     const { arts, mapOptions, selectedArtId } = this.state;
     const { zoom } = mapOptions;
+    console.log("In MAPS: ", this.state.selectedArtId)
     this.state.currentCenter = this.getNewCenter(this.props.resultArr)
     console.log(this.state.center)
     const image = zoom >= 16 ? artImageM : zoom >= 14 ? artImageS : artImageXS;

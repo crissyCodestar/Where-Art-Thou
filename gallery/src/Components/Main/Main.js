@@ -11,13 +11,18 @@ import MapInfo from "../Map/MapInfo";
 import './Main.css';
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 310b76f730ad6ed58b7ca299f2c795a8bad6fc7e
 class Main extends Component {
     constructor() {
         super();
         this.state = {
             zipcode: "",
             resultArr: [],
-            selectedArt: null
+            selectedArt: null,
+            arts:[]
         }
     }
 
@@ -27,6 +32,31 @@ class Main extends Component {
             zipcode: e.target.value
         })
     }
+
+
+      componentDidMount() {
+        axios
+          .get(
+            "https://data.cityofnewyork.us/resource/43hw-uvdj.json?"+
+              "&$limit=6"
+          )
+          .then(res => {
+            console.log(res.data.unique_key)
+            this.setState({
+              arts: res.data
+            });
+          })
+          .catch(err => {
+            console.log("error fetching arts");
+          });
+      }
+
+      onMapChange = options => {
+        this.setState({
+          mapOptions: options
+        });
+      };
+
 
     handleSubmit = () => {
         axios
@@ -49,11 +79,16 @@ class Main extends Component {
         this.setState({ selectedArt: art });
     };
 
-    render() {
-        console.log(this.state.selectedArt)
-        const { selectedArt } = this.state;
-        return (
+
+    render(){
+      console.log(this.state.arts)
+
+    console.log(this.state.selectedArt)
+    const { selectedArt } = this.state;
+        return(
+
             <div>
+
                 <div>
                     <input
                         type="text"
@@ -63,14 +98,18 @@ class Main extends Component {
                     />
                 </div>
                 <button
-                    id="submit"
+                    className="submit"
                     onClick={this.handleSubmit}>Where ART Thou?
                 </button>
+
                 <div id="homePage">
                     <div id="results">
-                        <Galleries resultArr={this.state.resultArr} />
-                    </div>
+                    <Galleries
+                    resultArr={this.state.resultArr}
+                    onArtClick={this.onArtClick} />
+                </div>
                     <div id="address">
+<<<<<<< HEAD
                         <p id="gaddress"><strong>Gallery Address</strong></p>
                         {selectedArt ? MapInfo(selectedArt) : <p id="gaddress"><strong></strong></p>}
                     </div>
@@ -82,11 +121,47 @@ class Main extends Component {
                             mapElement={<div style={{ height: `100%` }} />}
                             resultArr={this.state.resultArr}
                         />
+=======
+                        {selectedArt ? MapInfo(selectedArt) :
+                          <Featured />
+                         }
+>>>>>>> 310b76f730ad6ed58b7ca299f2c795a8bad6fc7e
                     </div>
+                <div className="Map">
+                <Map
+                  google={this.props.google}
+                  onArtClick={this.onArtClick}
+                  containerElement={<div style={{ height: `100%` }} />}
+                  mapElement={<div style={{ height: `100%` }} />}
+                  resultArr={this.state.resultArr}
+                  />
                 </div>
+
+                </div>
+
             </div>
         )
     }
+}
+
+
+const Featured=()=>{
+
+
+  return(
+    <div>
+
+      <div>
+
+          <h1>Welcome</h1>
+          <p id="quote">Art, freedom and creativity will change society faster than politics.</p>
+          <h3>-Victor Pinchuk</h3>
+
+
+      </div>
+
+    </div>
+  )
 }
 
 export default Main;

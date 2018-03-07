@@ -16,8 +16,8 @@ class App extends Component {
         <div>
           <div id="headerImgDiv">
             <div id="navbar">
-              <Link to="/">Home</Link> {"  "}
-              <Link to="/about">About</Link> {"  "}
+              <Link className="head" to="/">Home</Link> {"  "}
+              <Link  className="head" to="/about">About</Link> {"  "}
             </div>
             <h3 className="headerTitle">Where ART Thou</h3>
           </div>
