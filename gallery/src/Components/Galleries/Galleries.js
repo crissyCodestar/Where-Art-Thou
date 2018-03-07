@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Galleries.css'
-import { Link, Route, Switch } from 'react-router-dom';
+// import { Link, Route, Switch } from 'react-router-dom';
 
 
 class Galleries extends Component {

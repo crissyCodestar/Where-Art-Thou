@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import ReactDOM from 'react-dom';
-import { Route, Link, Switch } from "react-router-dom";
+// import ReactDOM from 'react-dom';
+import { Route, Link } from "react-router-dom";
 import Main from "./Components/Main/Main";
 import About from "./Components/About/About";
-import headerImg from "./pics/pexels-photo-110818.jpg";
+// import headerImg from "./pics/pexels-photo-110818.jpg";
 
 class App extends Component {
 
