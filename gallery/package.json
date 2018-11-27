@@ -2,8 +2,10 @@
   "name": "gallery",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://crissycodestar.github.io/Where-Art-Thou/",
   "dependencies": {
     "axios": "^0.17.1",
+    "gh-pages": "^2.0.1",
     "google-map-react": "^0.32.0",
     "google-maps-react": "^1.1.2",
     "invariant": "^2.2.3",
@@ -19,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "google-maps": "*"
