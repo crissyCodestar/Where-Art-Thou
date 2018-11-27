@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage":"https://crissycodestar.github.io/Where-Art-Thou/",
+
   "dependencies": {
     "axios": "^0.17.1",
     "gh-pages": "^2.0.1",
@@ -26,6 +27,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "google-maps": "*"
   }
 }

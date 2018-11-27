@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import './Main.css';
-import { Route, Link, Switch } from "react-router-dom";
+// import { Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import Galleries from "../Galleries/Galleries";
-
-import { GoogleApiWrapper } from 'google-maps-react'
-import Map from '../Map/Map'
+// import { GoogleApiWrapper } from 'google-maps-react'
+import Map from '../Map/Map';
 import MapInfo from "../Map/MapInfo";
-
 import './Main.css';
-
 
 
 class Main extends Component {
